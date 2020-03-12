@@ -90,7 +90,7 @@ function DocItem(props) {
           <meta property="og:description" content={description} />
         )}
         {keywords && keywords.length && (
-          <meta name="keywords" content={keywords.join(',')} />
+          <meta name="keywords" content={keywords.join ? keywords.join(',') : keywords} />
         )}
         {metaImage && <meta property="og:image" content={metaImageUrl} />}
         {metaImage && <meta property="twitter:image" content={metaImageUrl} />}
